@@ -1,0 +1,72 @@
+@media screen and (max-width: 767px) {
+  .history {
+    background-color: #f8f7f2;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    &__block {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      text-align: center;
+    }
+    &__heading {
+      @include fontFamily($garamond, 36px, 400);
+      margin-bottom: 10px;
+    }
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &--item {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        & > p {
+          @include fontFamily($garamond, 18px, 400);
+          text-align: left;
+        }
+        & > h3 {
+          @include fontFamily($garamond, 18px, 700);
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .icon__heart {
+    margin-bottom: 15px;
+  }
+
+  .circle-date {
+    position: relative;
+    margin: 0px auto;
+    width: 94px;
+    height: 94px;
+    border: 1px solid #f9e8da;
+    background-color: #f9e8da;
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+
+    & > p {
+      position: absolute;
+      @include fontFamily($pd, 30px, 700);
+      width: 90px;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+
+      &:last-child {
+        @include fontFamily($pd, 15px, 400);
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+      }
+    }
+  }
+}

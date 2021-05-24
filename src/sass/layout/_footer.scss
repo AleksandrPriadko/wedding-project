@@ -1,0 +1,33 @@
+@media screen and (max-width: 767px) {
+  .footer {
+    background: #f8f7f2;
+    padding: 20px 0px;
+  }
+
+  .photo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    & > p {
+      @include fontFamily($garamond, 18px, 400);
+      text-align: center;
+      line-height: 23px;
+      margin-bottom: 10px;
+      & > span {
+        @include fontFamily($garamond, 18px, 600);
+      }
+    }
+  }
+
+  .photo-block {
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      @include fontFamily($garamond, 18px, 700);
+      text-decoration: none;
+      color: #0c0b0b;
+    }
+  }
+}

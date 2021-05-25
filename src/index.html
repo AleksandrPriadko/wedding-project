@@ -142,23 +142,23 @@
         <div class="icon-block">
           <img src="./images/heart_icon.png" alt="heart icon" />
         </div>
-        <form class="form" action="" autocomplete="on">
+        <form class="form" action="" autocomplete="on" id="form">
           <div class="formall">
             <div class="form-block">
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="yes" checked />
+                <input class="radio__style" type="radio" name="persone" value="will" checked />
                 Конечно буду!
               </label>
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="no" />
+                <input class="radio__style" type="radio" name="persone" value="willNot" />
                 К сожалению, я не смогу
               </label>
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="one-persone" />
+                <input class="radio__style" type="radio" name="persone" value="willAlone" />
                 Буду одна/один
               </label>
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="one-persone" />
+                <input class="radio__style" type="radio" name="persone" value="willNotAlone" />
                 Буду с парой/детьми
               </label>
             </div>
@@ -183,7 +183,15 @@
             </div>
           </div>
 
-          <button class="btn" type="submit">Отправить</button>
+          <button class="btn" type="submit" data-action="btn">Отправить</button>
+          <button class="btn-closed" type="submit" data-action="loader">
+            <div class="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
         </form>
       </div>
     </section>

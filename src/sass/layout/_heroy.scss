@@ -8,6 +8,10 @@
   }
   .name {
     position: relative;
+
+    & > img {
+      display: none;
+    }
   }
   .block-name {
     position: absolute;
@@ -25,5 +29,40 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) {
+  .heroy {
+    height: 400px;
+  }
+  .name {
+    position: relative;
+    display: block;
+    top: -90px;
+    height: 480px;
+
+    background: url('../images/heroy_1290.jpg');
+    background-position: top left;
+    background-size: 680px;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+  }
+
+  .block-name {
+    position: absolute;
+    top: 90px;
+    right: 84px;
+    display: block;
+  }
+
+  .font-heroy {
+    display: block;
+    @include fontFamily($ronet, 130px, 400);
+
+    color: #000000;
+
+    transform: rotate(-5.6deg);
+    text-align: center;
+    line-height: 85px;
+    margin: 0;
+  }
 }

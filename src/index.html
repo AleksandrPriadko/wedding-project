@@ -27,15 +27,15 @@
           <ul class="navigate__list">
             <li class="navigate__list--item">
               <div class="circle-nav"></div>
-              <p>ГДЕ И КОГДА</p>
+              <p><a href="#local">ГДЕ И КОГДА</a></p>
             </li>
             <li class="navigate__list--item">
               <div class="circle-nav"></div>
-              <p>НАША ИСТОРИЯ</p>
+              <p><a href="#abouthistory">НАША ИСТОРИЯ</a></p>
             </li>
             <li class="navigate__list--item">
               <div class="circle-nav"></div>
-              <p>ПОЖЕЛАНИЯ</p>
+              <p><a href="#accept">ПОЖЕЛАНИЯ</a></p>
             </li>
           </ul>
         </nav>
@@ -44,7 +44,6 @@
     <section class="heroy">
       <div class="name container">
         <div class="block-name">
-          <!-- <img class="heroy" src="./images/heroy.jpg" alt="heroy" /> -->
           <p class="font-heroy">Aleksandr</p>
           <p class="font-heroy">and</p>
           <p class="font-heroy">Anastasiia</p>
@@ -53,8 +52,9 @@
     </section>
     <section class="location">
       <div class="location-block container">
-        <h2 class="location--heading">ГДЕ И КОГДА</h2>
+        <h2 class="location--heading" id="local">ГДЕ И КОГДА</h2>
         <img class="icon-heart" src="./images/heart_icon.png" alt="heart icon" />
+        <img class="branch" src="./images/branch.png" alt="branch" />
         <p class="location--text">
           <span class="bold">12 июня 2021</span> года может пройти как обычный день и не запомниться
           Вам ничем особенным... А может стать одним из самых приятных дней не только для нас, но и
@@ -75,97 +75,114 @@
     </section>
     <section class="history">
       <div class="history__block container">
-        <h2 class="history__heading">НАША ИСТОРИЯ</h2>
+        <h2 class="history__heading" id="abouthistory">НАША ИСТОРИЯ</h2>
         <img class="icon__heart" src="./images/heart_icon.png" alt="heart icon" />
+        <img class="branch-white" src="./images/branch_white.png" alt="branch" />
         <ul class="history__list">
           <li class="history__list--item">
             <div class="circle-date">
               <p>2</p>
               <p>января 2013</p>
             </div>
-            <h3>Знакомство</h3>
-            <p>
-              Мы познакомились на прогулке по случаю Нового года. Мы много смеялись и веселились.
-              Через пару дней мы стали переписываться в социальных сетях.
-            </p>
+            <div class="love-story">
+              <h3>Знакомство</h3>
+              <p>
+                Мы познакомились на прогулке по случаю Нового года. Мы много смеялись и веселились.
+                Через пару дней мы стали переписываться в социальных сетях.
+              </p>
+            </div>
           </li>
           <li class="history__list--item">
             <div class="circle-date">
               <p>28</p>
               <p>января 2013</p>
             </div>
-            <h3>Начало отношений</h3>
-            <p>
-              После двух недель общений и прогулок Саша уехал на учебу и мы стали все чаще и чаще
-              созваниваться, после чего мы решили попробовать построить отношения.
-            </p>
+            <div class="love-story">
+              <h3>Начало отношений</h3>
+              <p>
+                После двух недель общений и прогулок Саша уехал на учебу и мы стали все чаще и чаще
+                созваниваться, после чего мы решили попробовать построить отношения.
+              </p>
+            </div>
           </li>
           <li class="history__list--item">
             <div class="circle-date">
               <p>9</p>
               <p>августа 2016</p>
             </div>
-            <h3>Наше первое путешествие</h3>
-            <p>
-              Мы очень долго мечтали куда-то выбраться вдвоем за границу и вот наконец то это
-              случилось. У нас была незабываемая поездка в Египет.
-            </p>
+            <div class="love-story">
+              <h3>Наше первое путешествие</h3>
+              <p>
+                Мы очень долго мечтали куда-то выбраться вдвоем за границу и вот наконец то это
+                случилось. У нас была незабываемая поездка в Египет.
+              </p>
+            </div>
           </li>
           <li class="history__list--item">
             <div class="circle-date">
               <p>13</p>
               <p>июня 2020</p>
             </div>
-            <h3>Предложение</h3>
-            <p>
-              Это было мое День Рождение. После ресторана мы решили прогуляться по набережной и
-              когда мы решили посидеть на лавочкея заметила, что Саша очень нервничает, его щеки
-              стали красными. Потом я увидела, как он достал небольшую коробочку из кармана...
-            </p>
+            <div class="love-story">
+              <h3>Предложение</h3>
+              <p>
+                Это было мое День Рождение. После ресторана мы решили прогуляться по набережной и
+                когда мы решили посидеть на лавочкея заметила, что Саша очень нервничает, его щеки
+                стали красными. Потом я увидела, как он достал небольшую коробочку из кармана...
+              </p>
+            </div>
           </li>
         </ul>
       </div>
     </section>
     <section class="confirm">
       <div class="forma__block container">
-        <h2 class="confirm-heading">ПОДТВЕРДИТЕ ПРИСУТСТВИЕ</h2>
+        <h2 class="confirm-heading" id="accept">ПОДТВЕРДИТЕ ПРИСУТСТВИЕ</h2>
+        <img class="branch-confirm" src="./images/branch.png" alt="branch" />
         <div class="icon-block">
           <img src="./images/heart_icon.png" alt="heart icon" />
         </div>
         <form class="form" action="" autocomplete="on">
-          <label class="radio">
-            <input class="radio__style" type="radio" name="persone" value="yes" checked />
-            Конечно буду!
-          </label>
-          <label class="radio">
-            <input class="radio__style" type="radio" name="persone" value="no" />
-            К сожалению, я не смогу
-          </label>
-          <label class="radio">
-            <input class="radio__style" type="radio" name="persone" value="one-persone" />
-            Буду одна/один
-          </label>
-          <label class="radio">
-            <input class="radio__style" type="radio" name="persone" value="one-persone" />
-            Буду с парой/детьми
-          </label>
-          <label class="user" for="users"> Ваше имя и фамилия </label
-          ><input
-            class="user-name"
-            type="text"
-            name="username"
-            placeholder="Анастасія Каменських"
-            id="users"
-            required
-          />
-          <label class="user" for="message"> Сообщение </label
-          ><textarea
-            class="messages"
-            name="feedback"
-            rows="6"
-            placeholder="Оставьте свои пожелания"
-            id="message"
-          ></textarea>
+          <div class="formall">
+            <div class="form-block">
+              <label class="radio">
+                <input class="radio__style" type="radio" name="persone" value="yes" checked />
+                Конечно буду!
+              </label>
+              <label class="radio">
+                <input class="radio__style" type="radio" name="persone" value="no" />
+                К сожалению, я не смогу
+              </label>
+              <label class="radio">
+                <input class="radio__style" type="radio" name="persone" value="one-persone" />
+                Буду одна/один
+              </label>
+              <label class="radio">
+                <input class="radio__style" type="radio" name="persone" value="one-persone" />
+                Буду с парой/детьми
+              </label>
+            </div>
+            <div class="form-block">
+              <label class="user" for="users"> Ваше имя и фамилия </label
+              ><input
+                class="user-name"
+                type="text"
+                name="username"
+                placeholder="Анастасія Каменських"
+                id="users"
+                required
+              />
+              <label class="user" for="message"> Сообщение </label
+              ><textarea
+                class="messages"
+                name="feedback"
+                rows="6"
+                placeholder="Оставьте свои пожелания"
+                id="message"
+              ></textarea>
+            </div>
+          </div>
+
           <button class="btn" type="submit">Отправить</button>
         </form>
       </div>

@@ -25,6 +25,16 @@
     flex-direction: column;
 
     padding-top: 40px;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .formall {
+    display: flex;
+    flex-direction: column;
   }
 
   .radio {
@@ -76,6 +86,119 @@
     width: auto;
     height: 53px;
     @include fontFamily($garamond, 18px, 600);
+    text-transform: uppercase;
+    background: #f9e8da;
+    border: 1px solid #000000;
+  }
+  .branch-confirm {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .confirm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .confirm-heading {
+    @include fontFamily($garamond, 40px, 400);
+    text-align: center;
+
+    margin-bottom: 10px;
+  }
+
+  .forma__block {
+    position: relative;
+  }
+
+  .branch-confirm {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 129px;
+    height: 134px;
+    z-index: -1;
+    transform: rotate(1.6deg);
+  }
+
+  .icon-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      //width: 374px;
+
+      &:nth-child(1) {
+        margin-right: 80px;
+      }
+    }
+  }
+  .formall {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .radio {
+    @include fontFamily($garamond, 24px, 400);
+    margin-bottom: 46px;
+
+    &:nth-child(2n + 1) {
+      margin-bottom: 5px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 75px;
+    }
+
+    & > input {
+      @include fontFamily($garamond, 24px, 400);
+    }
+
+    &__style {
+      color: red;
+    }
+  }
+  .user {
+    @include fontFamily($garamond, 24px, 400);
+    margin-bottom: 5px;
+
+    &-name {
+      max-width: 500px;
+      height: 60px;
+      @include fontFamily($garamond, 24px, 400);
+      background-color: #f8f7f2;
+      border: 1px solid #000000;
+
+      padding-left: 8px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .messages {
+    resize: none;
+    max-width: 500px;
+    height: 135px;
+    @include fontFamily($garamond, 24px, 400);
+    background: #f8f7f2;
+    border: 1px solid #000000;
+    padding: 8px 7px;
+
+    margin-bottom: 40px;
+  }
+  .btn {
+    width: 300px;
+    height: 53px;
+    @include fontFamily($garamond, 24px, 600);
     text-transform: uppercase;
     background: #f9e8da;
     border: 1px solid #000000;

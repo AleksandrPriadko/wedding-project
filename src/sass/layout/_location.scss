@@ -39,4 +39,63 @@
     line-height: 23px;
     text-align: center;
   }
+  .branch {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .location {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .location--heading {
+    @include fontFamily($garamond, 40px, 400);
+
+    text-align: center;
+
+    margin-bottom: 10px;
+  }
+
+  .location-block {
+    position: relative;
+    text-align: center;
+  }
+
+  .icon-heart {
+    margin-bottom: 15px;
+  }
+  .location-block .bold {
+    @include fontFamily($garamond, 24px, 700);
+    line-height: 34px;
+    text-align: center;
+  }
+  .location--text {
+    max-width: 964px;
+    @include fontFamily($garamond, 24px, 400);
+    line-height: 34px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:nth-child(-n + 5) {
+      margin-bottom: 25px;
+    }
+  }
+  .location--text > span {
+    @include fontFamily($garamond, 24px, 600);
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .branch {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    width: 129px;
+    height: 134px;
+    z-index: -1;
+  }
 }

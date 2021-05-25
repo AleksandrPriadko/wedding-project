@@ -5,9 +5,6 @@
     padding-bottom: 48px;
 
     &__block {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
       text-align: center;
     }
     &__heading {
@@ -52,6 +49,101 @@
     border-radius: 50%;
 
     margin-bottom: 15px;
+
+    & > p {
+      position: absolute;
+      @include fontFamily($pd, 30px, 700);
+      width: 90px;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+
+      &:last-child {
+        @include fontFamily($pd, 15px, 400);
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+      }
+    }
+  }
+  .love-story {
+    & > p {
+      @include fontFamily($garamond, 18px, 400);
+      text-align: justify;
+    }
+    & > h3 {
+      @include fontFamily($garamond, 18px, 700);
+      text-align: justify;
+    }
+  }
+  .branch-white {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .history {
+    background-color: #f8f7f2;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__block {
+      position: relative;
+      text-align: center;
+    }
+    &__heading {
+      @include fontFamily($garamond, 40px, 400);
+      margin-bottom: 10px;
+    }
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &--item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 45px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .branch-white {
+    position: absolute;
+    right: 0px;
+    top: -20px;
+
+    width: 129px;
+    height: 134px;
+    z-index: 1;
+  }
+  .love-story {
+    width: 496px;
+
+    & > p {
+      @include fontFamily($garamond, 24px, 400);
+      text-align: justify;
+    }
+    & > h3 {
+      @include fontFamily($garamond, 24px, 700);
+      text-align: justify;
+    }
+  }
+  .icon__heart {
+    margin-bottom: 15px;
+  }
+
+  .circle-date {
+    position: relative;
+    margin-right: 17px;
+    width: 94px;
+    height: 94px;
+    border: 1px solid #f9e8da;
+    background-color: #f9e8da;
+    border-radius: 50%;
 
     & > p {
       position: absolute;

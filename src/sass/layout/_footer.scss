@@ -31,3 +31,44 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    background: #f8f7f2;
+    padding: 50px 0px;
+  }
+
+  .photo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &-block {
+      display: flex;
+      align-items: center;
+    }
+    &-block > img {
+      width: 48px;
+      //height: 68px;
+    }
+    & > p {
+      @include fontFamily($garamond, 24px, 400);
+      text-align: center;
+      line-height: 23px;
+      margin-bottom: 10px;
+      & > span {
+        @include fontFamily($garamond, 24px, 600);
+      }
+    }
+  }
+
+  .photo-block {
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      @include fontFamily($garamond, 24px, 700);
+      text-decoration: none;
+      color: #0c0b0b;
+    }
+  }
+}

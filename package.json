@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://aleksandrpriadko.github.io/wedding-project-aa",
+  "homepage": "https://aleksandrpriadko.github.io/wedding-project",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/",
+    "build": "parcel build src/*.html --public-url /wedding-project",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p"
   },

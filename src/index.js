@@ -1,22 +1,32 @@
 import './sass/main.scss';
 const axios = require('axios').default;
 
-const form = document.getElementById('form');
-const btn = document.querySelector('[data-action="btn"]');
-const btnLoader = document.querySelector('[data-action="loader"]');
-const userName = document.querySelector('.user-name');
-console.log(userName);
-const messages = document.querySelector('messages');
+const Ref = {
+  form: document.getElementById('form'),
+  btn: document.querySelector('[data-action="btn"]'),
+  btnLoader: document.querySelector('[data-action="loader"]'),
+  nav: document.querySelector('[href="#accept"]'),
+};
 
-form.addEventListener('submit', formSend);
+Ref.form.addEventListener('submit', formSend);
+Ref.nav.addEventListener('click', e => {
+  e.preventDefault();
+  console.log(e);
+
+  window.scrollTo({
+    top: auto,
+    left: 100,
+    behavior: 'smooth',
+  });
+});
 
 function formSend(e) {
   e.preventDefault();
 
-  btn.classList.remove('btn');
-  btn.classList.add('btn-closed');
-  btnLoader.classList.remove('btn-closed');
-  btnLoader.classList.add('btn-loader');
+  Ref.btn.classList.remove('btn');
+  Ref.btn.classList.add('btn-closed');
+  Ref.btnLoader.classList.remove('btn-closed');
+  Ref.btnLoader.classList.add('btn-loader');
 
   const formsData = e.target;
   const formData = new FormData(formsData);
@@ -41,17 +51,17 @@ function formSend(e) {
       console.log(request);
       if (request.status === 200) {
         form.reset();
-        btnLoader.classList.remove('btn-loader');
-        btnLoader.classList.add('btn-closed');
-        btn.classList.remove('btn-closed');
-        btn.classList.add('btn');
+        Ref.btnLoader.classList.remove('btn-loader');
+        Ref.btnLoader.classList.add('btn-closed');
+        Ref.btn.classList.remove('btn-closed');
+        Ref.btn.classList.add('btn');
         alert('Письмо отправлено');
       } else {
         alert('Ошибка');
-        btnLoader.classList.remove('btn-loader');
-        btnLoader.classList.add('btn-closed');
-        btn.classList.remove('btn-closed');
-        btn.classList.add('btn');
+        Ref.btnLoader.classList.remove('btn-loader');
+        Ref.btnLoader.classList.add('btn-closed');
+        Ref.btn.classList.remove('btn-closed');
+        Ref.btn.classList.add('btn');
       }
     })
     .catch(error => {

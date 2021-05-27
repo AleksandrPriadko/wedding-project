@@ -21,23 +21,27 @@
       <div class="container">
         <nav class="navigate">
           <p class="date">12 июня 2021</p>
-          <button class="menu" type="button">
+          <button class="menu" type="button" data-action="open-modal">
             <img src="./images/cil_hamburger-menu.svg" alt="menu" />
           </button>
-          <ul class="navigate__list">
-            <li class="navigate__list--item">
-              <div class="circle-nav"></div>
-              <p><a href="#local" id="click">ГДЕ И КОГДА</a></p>
-            </li>
-            <li class="navigate__list--item">
-              <div class="circle-nav"></div>
-              <p><a href="#abouthistory" id="click">НАША ИСТОРИЯ</a></p>
-            </li>
-            <li class="navigate__list--item">
-              <div class="circle-nav"></div>
-              <p><a href="#accept" id="click">ПОЖЕЛАНИЯ</a></p>
-            </li>
-          </ul>
+          <div class="backdrop js-backdrop">
+            <div class="modal">
+              <ul class="navigate__list">
+                <li class="navigate__list--item">
+                  <div class="circle-nav"></div>
+                  <p><a href="#local" id="click">ГДЕ И КОГДА</a></p>
+                </li>
+                <li class="navigate__list--item">
+                  <div class="circle-nav"></div>
+                  <p><a href="#abouthistory" id="click">НАША ИСТОРИЯ</a></p>
+                </li>
+                <li class="navigate__list--item">
+                  <div class="circle-nav"></div>
+                  <p><a href="#accept" id="click">ПОЖЕЛАНИЯ</a></p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -66,9 +70,12 @@
         <p class="location--text">
           Торжество будет проходить по адресу
           <span
-            >г.Белая Церковь, ул.Семашко 213, ресторан “Берегиня”. Начало проведения мероприятия в
+            >г. Белая Церковь, ул. Семашко 213, ресторан “Берегиня”. Начало проведения мероприятия в
             16:00</span
           >
+        </p>
+        <p class="location--text">
+          <span>Начало проведения мероприятия в 16:00</span>
         </p>
         <p class="location--text">Просим сообщить о Вашем присутствие <span>до 1 июня</span></p>
       </div>
@@ -156,22 +163,9 @@
                   class="radio__style"
                   type="radio"
                   name="Presence"
-                  value="Конечно буду!"
+                  value="Буду одна/один"
                   checked
                 />
-                Конечно буду!
-              </label>
-              <label class="radio">
-                <input
-                  class="radio__style"
-                  type="radio"
-                  name="Presence"
-                  value="К сожалению, я не смогу"
-                />
-                К сожалению, я не смогу
-              </label>
-              <label class="radio">
-                <input class="radio__style" type="radio" name="Presence" value="Буду одна/один" />
                 Буду одна/один
               </label>
               <label class="radio">
@@ -183,6 +177,15 @@
                 />
                 Буду с парой/детьми
               </label>
+              <label class="radio">
+                <input
+                  class="radio__style"
+                  type="radio"
+                  name="Presence"
+                  value="К сожалению, я не смогу"
+                />
+                К сожалению, я не смогу
+              </label>
             </div>
             <div class="form-block">
               <label class="user" for="users"> Ваше имя и фамилия </label
@@ -190,13 +193,14 @@
                 class="user-name"
                 type="text"
                 name="Name"
-                placeholder="Анастасія Каменських"
+                placeholder="Иван Петров"
                 id="users"
                 required
               />
               <label class="user" for="message"> Сообщение </label
               ><textarea
                 class="messages"
+                type="text"
                 name="Message"
                 rows="6"
                 placeholder="Оставьте свои пожелания"

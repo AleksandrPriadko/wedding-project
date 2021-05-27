@@ -1,22 +1,25 @@
 import './sass/main.scss';
+import './js/modal';
 const axios = require('axios').default;
 
 const Ref = {
   form: document.getElementById('form'),
   btn: document.querySelector('[data-action="btn"]'),
   btnLoader: document.querySelector('[data-action="loader"]'),
-  nav: document.querySelector('[href="#accept"]'),
 };
-
+// Прокрутка при нажатии по навигации сайта
 Ref.form.addEventListener('submit', formSend);
-Ref.nav.addEventListener('click', e => {
-  e.preventDefault();
-  console.log(e);
-
-  window.scrollTo({
-    top: auto,
-    left: 100,
-    behavior: 'smooth',
+document.querySelectorAll('#click').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offSetPosition = elementPosition - 0;
+    window.scrollBy({
+      top: offSetPosition,
+      behavior: 'smooth',
+    });
   });
 });
 

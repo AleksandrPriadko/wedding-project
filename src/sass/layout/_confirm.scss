@@ -218,6 +218,9 @@
     border: 1px solid #000000;
 
     &-loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 300px;
       height: 53px;
       @include fontFamily($garamond, 24px, 600);

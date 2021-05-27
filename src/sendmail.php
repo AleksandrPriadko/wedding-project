@@ -10,7 +10,7 @@
     $mail->setlanguage('ru', 'phpmailer/language');
     $mail->IsHTML(true);
 
-    $mail->setForm('titimoshuk.anastasiya@gmail.com', 'Гости');
+    //$mail->setForm('titimoshuk.anastasiya@gmail.com', 'Гости');
     $mail->addAddress('aleksandr.pryadko@gmail.com');
     $mail->Subject = 'Приглашение на свадьбу';
 

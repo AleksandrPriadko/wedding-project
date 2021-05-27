@@ -142,23 +142,45 @@
         <div class="icon-block">
           <img src="./images/heart_icon.png" alt="heart icon" />
         </div>
-        <form class="form" action="sendmail.php" autocomplete="on" id="form">
+        <form
+          class="form"
+          method="POST"
+          action="https://formfor.site/send/WXHrRdmCTkBpWWEdxi9IDCc7p0X0O6"
+          autocomplete="on"
+          id="form"
+        >
           <div class="formall">
             <div class="form-block">
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="will" checked />
+                <input
+                  class="radio__style"
+                  type="radio"
+                  name="Presence"
+                  value="Конечно буду!"
+                  checked
+                />
                 Конечно буду!
               </label>
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="willNot" />
+                <input
+                  class="radio__style"
+                  type="radio"
+                  name="Presence"
+                  value="К сожалению, я не смогу"
+                />
                 К сожалению, я не смогу
               </label>
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="willAlone" />
+                <input class="radio__style" type="radio" name="Presence" value="Буду одна/один" />
                 Буду одна/один
               </label>
               <label class="radio">
-                <input class="radio__style" type="radio" name="persone" value="willNotAlone" />
+                <input
+                  class="radio__style"
+                  type="radio"
+                  name="Presence"
+                  value="Буду с парой/детьми"
+                />
                 Буду с парой/детьми
               </label>
             </div>
@@ -167,7 +189,7 @@
               ><input
                 class="user-name"
                 type="text"
-                name="username"
+                name="Name"
                 placeholder="Анастасія Каменських"
                 id="users"
                 required
@@ -175,7 +197,7 @@
               <label class="user" for="message"> Сообщение </label
               ><textarea
                 class="messages"
-                name="feedback"
+                name="Message"
                 rows="6"
                 placeholder="Оставьте свои пожелания"
                 id="message"

@@ -26,12 +26,16 @@
   }
 
   .modal {
-    position: absolute;
-    top: 82px;
-    max-width: 300px;
+    position: relative;
+    top: -65px;
+    left: 62px;
+    max-width: 175px;
     width: 100%;
-    min-height: 320px;
+    min-height: 100px;
     background-color: #ffe6e6;
-    opacity: 0.85;
+    opacity: 1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
   }
 }

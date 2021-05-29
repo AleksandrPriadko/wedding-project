@@ -41,13 +41,13 @@ function formSend(e) {
   });
   console.log(submittedData);
   const nameKey = submittedData.Name;
-  const messageValue = submittedData.Message;
+  const messageValue = submittedData.Comment;
   const presenceValue = submittedData.Presence;
 
   axios
-    .post('https://formfor.site/send/WXHrRdmCTkBpWWEdxi9IDCc7p0X0O6', {
+    .post('https://formfor.site/send/nvxuhsHU9UDZTm6wHGPdkGwQGBrb1t', {
       Name: nameKey,
-      Message: messageValue,
+      Comment: messageValue,
       Presence: presenceValue,
     })
     .then(request => {
